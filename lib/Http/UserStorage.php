@@ -2,7 +2,6 @@
 
 namespace Majkl578\NetteAddons\Doctrine2Identity\Http;
 
-use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Majkl578\NetteAddons\Doctrine2Identity\Security\FakeIdentity;
 use Nette\Http\Session;
@@ -14,7 +13,7 @@ use Nette\Security\IIdentity;
  */
 class UserStorage extends NetteUserStorage
 {
-	/** @var EntityManager */
+	/** @var EntityManagerInterface */
 	private $entityManager;
 
 	public function  __construct(Session $sessionHandler, EntityManagerInterface $entityManager)
